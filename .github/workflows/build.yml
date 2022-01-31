@@ -13,20 +13,7 @@ jobs:
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
     steps:
-      - name: Experimental Status
-        run: |
-          docker version -f '{{.Server.Experimental}}'
-      - name: Docker
-        run: |
-          docker version -f '{{.Server.Experimental}}'
-          export DOCKER_CLI_EXPERIMENTAL=enabled
-          docker version -f '{{.Server.Experimental}}'
-          sudo service docker restart
-          docker version -f '{{.Server.Experimental}}'
-          sudo rm /etc/docker/daemon.json
-          echo $'{\n    "experimental": true\n}' | sudo tee /etc/docker/daemon.json
-          sudo service docker restart
-          docker version -f '{{.Server.Experimental}}'
+
       - uses: actions/checkout@v2
       - name: set envirnment variables
         id: config
