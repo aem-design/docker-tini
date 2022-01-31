@@ -48,8 +48,8 @@ jobs:
           platforms: linux/amd64
           load: true
           tags: |
-            ${{ env.IMAGE }}:latest
-            ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE }}:latest
+            ${{ env.IMAGE }}:${{ env.GIT_BRANCH }}
+            ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE }}:${{ env.GIT_BRANCH }}
           secrets: |
             "github_token=${{ secrets.GITHUB_TOKEN }}"
 
@@ -64,8 +64,8 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ${{ env.IMAGE }}:latest
-            ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE }}:latest
+            ${{ env.IMAGE }}:${{ env.GIT_BRANCH }}
+            ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE }}:${{ env.GIT_BRANCH }}
 
       - name: Update Docker Hub Description
         uses: peter-evans/dockerhub-description@v2
