@@ -1,4 +1,4 @@
-FROM       ubuntu:focal as build
+FROM       arm64v8/ubuntu:focal
 
 LABEL   os="ubuntu 8" \
         container.description="ubuntu with tini" \
@@ -27,6 +27,4 @@ RUN \
     gpg --batch --verify /bin/tini.asc /bin/tini && \
     chmod +x /bin/tini
 
-FROM scratch
-COPY --from=build /bin/tini /bin/tini
 ENTRYPOINT ["/bin/tini", "--"]
