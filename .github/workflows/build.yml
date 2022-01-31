@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     if: "!contains(github.event.head_commit.message, 'skip ci')"
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     env:
       DOCKER_REGISTRY: docker.io
       ORGANISATION_NAME: aemdesign
@@ -35,9 +35,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          platforms: linux/arm64
+          platforms: linux/amd64
           load: true
-          tags: ${{ env.IMAGE }}:${{ env.GIT_BRANCH }}
+          tags: ${{ env.IMAGE }}:latest
           secrets: |
             "github_token=${{ secrets.GITHUB_TOKEN }}"
 
@@ -49,17 +49,17 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          platforms: linux/arm64
+          platforms: linux/amd64
           push: true
-          tags: ${{ env.IMAGE }}:${{ env.GIT_BRANCH }}
+          tags: ${{ env.IMAGE }}:latest
 
-      - name: update registry description with readme on master
-        if: github.ref == 'refs/heads/master'
+      - name: update registry description with readme on main
+        if: github.ref == 'refs/heads/main'
         run: |
           docker run --rm -v $(pwd):/data/ aemdesign/dockerhub-description "$DOCKER_USERNAME" "$DOCKER_PASSWORD" "$IMAGE"
 
       - uses: meeDamian/github-release@1.0
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ env.GITHUB_TAG }}
