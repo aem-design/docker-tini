@@ -1,15 +1,15 @@
-## CentOS 8 with Tini
+## Ubuntu 8 with Tini
 
-[![build_status](https://travis-ci.org/aem-design/centos-tini.svg?branch=master)](https://travis-ci.org/aem-design/centos-tini) 
-[![github license](https://img.shields.io/github/license/aem-design/centos-tini)](https://github.com/aem-design/centos-tini) 
-[![github issues](https://img.shields.io/github/issues/aem-design/centos-tini)](https://github.com/aem-design/centos-tini) 
-[![github last commit](https://img.shields.io/github/last-commit/aem-design/centos-tini)](https://github.com/aem-design/centos-tini) 
-[![github repo size](https://img.shields.io/github/repo-size/aem-design/centos-tini)](https://github.com/aem-design/centos-tini) 
-[![docker stars](https://img.shields.io/docker/stars/aemdesign/centos-tini)](https://hub.docker.com/r/aemdesign/centos-tini) 
-[![docker pulls](https://img.shields.io/docker/pulls/aemdesign/centos-tini)](https://hub.docker.com/r/aemdesign/centos-tini) 
-[![github release](https://img.shields.io/github/release/aem-design/centos-tini)](https://github.com/aem-design/centos-tini)
+[![build](https://github.com/aem-design/docker-tini/actions/workflows/build.yml/badge.svg)](https://github.com/aem-design/docker-tini/actions/workflows/build.yml)
+[![github license](https://img.shields.io/github/license/aem-design/docker-tini)](https://github.com/aem-design/docker-tini)
+[![github issues](https://img.shields.io/github/issues/aem-design/docker-tini)](https://github.com/aem-design/docker-tini)
+[![github last commit](https://img.shields.io/github/last-commit/aem-design/docker-tini)](https://github.com/aem-design/docker-tini)
+[![github repo size](https://img.shields.io/github/repo-size/aem-design/docker-tini)](https://github.com/aem-design/docker-tini)
+[![docker stars](https://img.shields.io/docker/stars/aemdesign/docker-tini)](https://hub.docker.com/r/aemdesign/tini)
+[![docker pulls](https://img.shields.io/docker/pulls/aemdesign/docker-tini)](https://hub.docker.com/r/aemdesign/tini)
+[![github release](https://img.shields.io/github/release/aem-design/docker-tini)](https://github.com/aem-design/docker-tini)
 
-This is docker image based on CentOS with Tini, this is used as base for AEM Design images.
+This is docker image based on Ubuntu with Tini, this is used as base for AEM Design images.
 
 
 ### Included Packages
