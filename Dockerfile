@@ -1,7 +1,7 @@
 FROM       arm64v8/debian
 
-LABEL   os="ubuntu 8" \
-        container.description="ubuntu with tini" \
+LABEL   os="debain 8 arm" \
+        container.description="debian with tini" \
         version="0.19.0" \
         maintainer="devops <devops@aem.design>" \
         imagename="tini" \
