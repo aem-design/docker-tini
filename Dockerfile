@@ -1,4 +1,4 @@
-FROM       ubuntu:focal
+FROM       arm64v8/debian
 
 LABEL   os="ubuntu 8" \
         container.description="ubuntu with tini" \
