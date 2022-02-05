@@ -1,7 +1,7 @@
-FROM       ubuntu:focal
+FROM       debain
 
-LABEL   os="ubuntu 8" \
-        container.description="ubuntu with tini" \
+LABEL   os="debain 8" \
+        container.description="debian with tini" \
         version="0.19.0" \
         maintainer="devops <devops@aem.design>" \
         imagename="tini" \
@@ -11,7 +11,6 @@ LABEL   os="ubuntu 8" \
 ARG TINI_VERSION="v0.19.0"
 ARG TINI_KEY="595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7"
 ARG TINI_URL="https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static-amd64"
-ARG GPG_KEYS="595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7"
 
 RUN \
     apt-get update && \
