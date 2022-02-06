@@ -1,4 +1,4 @@
-FROM       debain
+FROM       debian
 
 LABEL   os="debain 8" \
         container.description="debian with tini" \
